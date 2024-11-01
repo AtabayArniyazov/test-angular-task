@@ -1,0 +1,10 @@
+<div class="search-container">
+  <i class="search-icon" (click)="toggleExpand()">🔍</i>
+  <input
+    type="text"
+    placeholder="Search..."
+    *ngIf="isExpanded"
+    (blur)="toggleExpand()"
+  />
+  <div class="filter-panel" *ngIf="isExpanded">Filter options go here</div>
+</div>

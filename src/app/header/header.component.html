@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="logo">Logo</div>
+  <div class="search-container">
+    <button mat-icon-button (click)="toggleSearch()" *ngIf="!isSearchOpen">
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-form-field [class.open]="isSearchOpen" class="search-field" appearance="outline">
+      <input matInput (blur)="closeSearch()">
+    </mat-form-field>
+  </div>
+</header>
